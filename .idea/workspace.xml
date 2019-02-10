@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab2de2b8-26ad-4bd7-8501-2791ebb4f78a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/com/powerboat9/gconfigeditor/EnumMotorType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GalaxyConfigEditor/com/powerboat9/gconfigeditor/ConfigItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GalaxyConfigEditor/com/powerboat9/gconfigeditor/ConfigItem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GalaxyConfigEditor/com/powerboat9/gconfigeditor/ConfigList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GalaxyConfigEditor/com/powerboat9/gconfigeditor/ConfigList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GalaxyConfigEditor/com/powerboat9/gconfigeditor/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GalaxyConfigEditor/com/powerboat9/gconfigeditor/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GalaxyConfigEditor/com/powerboat9/gconfigeditor/MainGUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GalaxyConfigEditor/com/powerboat9/gconfigeditor/MainGUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GalaxyConfigEditor/com/powerboat9/gconfigeditor/MainMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GalaxyConfigEditor/com/powerboat9/gconfigeditor/MainMenu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GalaxyConfigEditor/com/powerboat9/gconfigeditor/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GalaxyConfigEditor/com/powerboat9/gconfigeditor/MainMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GalaxyConfigEditor/com/powerboat9/gconfigeditor/MainPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GalaxyConfigEditor/com/powerboat9/gconfigeditor/MainPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/com/powerboat9/gconfigeditor/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/com/powerboat9/gconfigeditor/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/com/powerboat9/gconfigeditor/MainGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/com/powerboat9/gconfigeditor/MainGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/com/powerboat9/gconfigeditor/MotorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/com/powerboat9/gconfigeditor/MotorConfig.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/java/com/powerboat9/gconfigeditor/MainGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="134" column="52" lean-forward="true" selection-start-line="134" selection-start-column="52" selection-end-line="134" selection-end-column="52" />
+            <state relative-caret-position="279">
+              <caret line="162" column="31" selection-start-line="162" selection-start-column="31" selection-end-line="162" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1366#1367#0" expanded="true" />
@@ -63,7 +51,20 @@
                 <element signature="e#1586#1587#0" expanded="true" />
                 <element signature="e#4316#4991#0" expanded="true" />
                 <element signature="e#4990#4991#0" expanded="true" />
-                <element signature="e#6069#6070#0" expanded="true" />
+                <element signature="e#5681#5682#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/javax/swing/JScrollPane.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="316" column="39" selection-start-line="316" selection-start-column="39" selection-end-line="316" selection-end-column="39" />
+              <folding>
+                <element signature="e#11975#11976#0" expanded="true" />
+                <element signature="e#12063#12064#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -459,13 +460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/powerboat9/gconfigeditor/EnumMotorType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/java/awt/FlowLayout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
@@ -502,10 +496,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/java/awt/LayoutManager2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="71" column="6" lean-forward="true" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/javax/swing/JScrollPane.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="316" column="39" selection-start-line="316" selection-start-column="39" selection-end-line="316" selection-end-column="39" />
+          <folding>
+            <element signature="e#11975#11976#0" expanded="true" />
+            <element signature="e#12063#12064#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/powerboat9/gconfigeditor/EnumMotorType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/powerboat9/gconfigeditor/MainGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="134" column="52" lean-forward="true" selection-start-line="134" selection-start-column="52" selection-end-line="134" selection-end-column="52" />
+        <state relative-caret-position="279">
+          <caret line="162" column="31" selection-start-line="162" selection-start-column="31" selection-end-line="162" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1366#1367#0" expanded="true" />
@@ -518,7 +537,7 @@
             <element signature="e#1586#1587#0" expanded="true" />
             <element signature="e#4316#4991#0" expanded="true" />
             <element signature="e#4990#4991#0" expanded="true" />
-            <element signature="e#6069#6070#0" expanded="true" />
+            <element signature="e#5681#5682#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -113,6 +113,18 @@ class MainPanel extends JTabbedPane {
     }
 }
 
+class ViewPort extends JScrollPane {
+    public MainPanel parent;
+    public ConfigList data;
+
+    public ViewPort(MainPanel in) {
+        super();
+        this.setLayout(new ScrollPaneLayout());
+        parent = in;
+        data = new ConfigList(parent);
+    }
+}
+
 class ConfigList extends JPanel {
     private ArrayList<ConfigItem> items = new ArrayList<>();
 
@@ -121,31 +133,13 @@ class ConfigList extends JPanel {
 
     private JButton addButton;
 
-    private static GridBagConstraints layoutConstraints = new GridBagConstraints();
-
-    static {
-        layoutConstraints.gridwidth = GridBagConstraints.REMAINDER;
-        layoutConstraints.fill = GridBagConstraints.HORIZONTAL;
-        layoutConstraints.weightx = 1;
-        layoutConstraints.anchor = GridBagConstraints.PAGE_START;
-    }
-
-    private GridBagLayout lay;
-
-    private static GridBagConstraints bottomConstraints = new GridBagConstraints();
-
-    static {
-        bottomConstraints.weighty = 1;
-    }
-
     private boolean dirty;
 
     public ConfigList(MainPanel mainPanelIn) {
         super();
+        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         this.setBorder(BorderFactory.createLineBorder(Color.BLUE));
         mainPanel = mainPanelIn;
-        lay = new GridBagLayout();
-        this.setLayout(lay);
         addButton = new JButton();
         addButton.setAction(new AbstractAction() {
             @Override
@@ -166,8 +160,8 @@ class ConfigList extends JPanel {
                 addItem(new ConfigItem(new SingleMotorConfig(0, "victor", s), ConfigList.this));
             }
         });
+        addButton.setText("+");
         this.add(addButton);
-        lay.setConstraints(addButton, layoutConstraints);
     }
 
     public void loadFrom(MotorConfig con) {
@@ -181,7 +175,6 @@ class ConfigList extends JPanel {
             for (SingleMotorConfig c : con.motors) {
                 t = new ConfigItem(c, this);
                 items.add(t);
-                lay.setConstraints(t, layoutConstraints);
                 this.add(t);
             }
         }
@@ -199,7 +192,6 @@ class ConfigList extends JPanel {
     public void addItem(ConfigItem i) {
         items.add(i);
         this.add(i);
-        lay.setConstraints(i, layoutConstraints);
         this.repaint();
         this.revalidate();
         markDirty();
@@ -275,6 +267,13 @@ class ConfigItem extends JPanel {
         });
         removeButton.setText("-");
         this.add(removeButton);
+    }
+
+    @Override
+    public Dimension getMaximumSize() {
+        Dimension d1 = super.getMaximumSize();
+        Dimension d2 = getPreferredSize();
+        return new Dimension(d1.width, d2.height);
     }
 
     @Override
