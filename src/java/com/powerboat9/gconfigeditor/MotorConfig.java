@@ -18,10 +18,8 @@ public class MotorConfig {
                 o = o.get("pwm").getAsJsonObject();
                 for (String s : o.keySet()) {
                     try {
-                        int motorNum = o.get("port").getAsInt();
-                        String type = o.get("type").getAsString();
-                        motors.add(new SingleMotorConfig(motorNum, type, s));
-                    } catch (IllegalStateException ex) {
+                        motors.add(new SingleMotorConfig(o.get(s).getAsJsonObject(), s));
+                    } catch (IllegalStateException|NullPointerException ex) {
                         throw new Exception("[ERROR] " + s, ex);
                     }
                 }
@@ -33,14 +31,14 @@ public class MotorConfig {
         }
     }
 
-    public JsonObject build() {
-        JsonObject pwm = new JsonObject();
-        for (SingleMotorConfig c : motors) {
-            JsonObject desc = new JsonObject();
-            desc.add("port", new JsonPrimitive(c.port));
-            pwm.add(c.name, new JsonObject());
+    public void build(JsonObject o) {
+        JsonObject pwm;
+        if (o.has("pwm") && o.get("pwm").isJsonObject()) pwm = o.get("pwm").getAsJsonObject();
+        else {
+            pwm = new JsonObject();
+            o.add("pwm", pwm);
         }
-        return pwm;
+        for (SingleMotorConfig c : motors) pwm.add(c.name, c.build());
     }
 }
 
@@ -53,5 +51,16 @@ class SingleMotorConfig {
         port = portIn;
         type = typeIn;
         name = nameIn;
+    }
+
+    public SingleMotorConfig(JsonObject o, String name) {
+        this(o.get("port").getAsInt(), o.get("type").getAsString(), name);
+    }
+
+    public JsonObject build() {
+        JsonObject t = new JsonObject();
+        t.add("port", new JsonPrimitive(port));
+        t.add("type", new JsonPrimitive(type));
+        return t;
     }
 }
