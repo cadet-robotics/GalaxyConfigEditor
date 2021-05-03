@@ -3,6 +3,7 @@ package com.powerboat9.gconfigeditor;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonParser;
+import com.powerboat9.gconfigeditor.gui.MainGUI;
 
 import javax.swing.*;
 import java.io.File;
@@ -10,13 +11,15 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 public class Main {
+    public static MainGUI gui;
+
     public static JsonObject json = null;
     public static MotorConfig motorConfig = null;
 
     public static void main(String[] args) throws UnsupportedLookAndFeelException {
         if (args.length > 1) throw new IllegalArgumentException("Usage: (GalaxyConfig.jar) [file]");
         if (args.length == 1) updateConfig(new File(args[0]));
-        MainGUI gui = new MainGUI();
+        gui = new MainGUI();
     }
 
     private static JsonObject getConfig(File f) {
@@ -40,5 +43,10 @@ public class Main {
             e.printStackTrace();
             motorConfig = null;
         }
+    }
+
+    public static void writeConfig(File f) {
+        gui.setEditEnabled(false);
+
     }
 }
